@@ -11,6 +11,6 @@ int factorial(int n)
 
 int main()
 {
-    int num=5;
-    cout<<factorial(num)<<endl;
+    int num=5;			//num must be greater than -1
+    cout<<"Factorial : "<< factorial(num) <<endl;
 }

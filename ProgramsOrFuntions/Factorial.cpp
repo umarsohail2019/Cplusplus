@@ -3,9 +3,11 @@ using namespace std;
 
 int factorial(int n)
 {
-	int f = 1;
-	if (n <= 1)
+    	if(n<0)
+        	return -1;      // wrong entry
+	else if (n==0 or n==1)
 		return 1;
+	int f = 1;
 	while(n>=2)
 		f*=n, n--;
 	return f;
