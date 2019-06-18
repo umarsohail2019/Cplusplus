@@ -1,16 +1,16 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
 
-int fact(int n)
+int factorial(int n)
 {
-	if (n <= 2)
-		return n;
-	return n * fact(n - 1);
+    if(n<=1)
+        return 1;
+    else
+        return n*factorial(n-1);    
 }
 
 int main()
 {
-	cout << "Fact : "<<fact(5) << endl;
-	system("pause");
+    int num=5;
+    cout<<factorial(num)<<endl;
 }
