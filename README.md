@@ -1,5 +1,5 @@
 # Cplusplus
 
-https://www.sanfoundry.com/\n
+https://www.sanfoundry.com
 https://www.linuxtopia.org
 
