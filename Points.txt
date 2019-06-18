@@ -1,0 +1,88 @@
+https://www.sanfoundry.com/
+https://www.linuxtopia.org
+
+
+return object ,*object ,&object
+and what happen const declare
+befor function datatype
+after function
+
+
+++obj4 = 12;
+cout << obj4 << endl;
+it change the value to 12
+file name is "Operator"
+
+returning address of local variable or temporary (warning)
+obj4++;
+why we only return object without reference
+(with reference it give me garbage)
+
+
+int *ptr=new int[1];
+delete ptr; //delete first address
+delele[]ptr;//delete whole *array	//Both are correct systax to deallocate memory of pointers
+but when we come in user define object 
+it become different
+Suppose Date *ptr=new Date[1];
+delete ptr; //delete first address	here this is valid
+delele[]ptr;//delete whole *array	invalid
+because one object create so we delete only array of 1 object
+Suppose Date *ptr=new Date[5];
+delete ptr; //delete first address	invalid
+delele[]ptr;//delete whole *array	valid
+because 5 object create so we delete array of 5 object
+
+
+
+data members 
+int size;
+int *ptr
+int main()
+{
+Array obj(1);			
+obj.PrintArray();	
+Array *obj1=new Array;		
+obj1[0].PrintArray();
+delete obj1;			when i delete this pointer object
+				here is point ky agar mein 
+				Print function call krta hn to 
+				object ka *ptr mein garbage hoga 
+				jo error dy ga nechy print ka funtion 
+				ha
+obj1[0].PrintArray();
+cout << obj1[0].getSize() << endl;	// garbage value
+obj1[0].~Array();			//error 
+} 
+void Array::PrintArray()const
+{
+	/*int x = 0;
+	if (ptr)		(ptr) this condition give true every time
+				its a useless condition
+	{
+		while (x < size)
+			cout << ptr[x] << endl, x++;
+		cout << size << "\n\n";
+	}*/
+	int x = 0;
+	cout << ptr[x] << endl;				if above in comment
+							then it give error 100%sure;
+	cout << size << "\n\n";
+}
+
+
+
+purpose ?
+->return object from userdefine class
+->return const object from userdefine class
+->return object by reference from userdefine class
+->return const object by reference from userdefine class
+->return object pointer from userdefine class
+->return const object pointer from userdefine class
+
+
+
+
+
+
+
