@@ -1,6 +1,3 @@
-https://www.sanfoundry.com/
-https://www.linuxtopia.org
-
 
 return object ,*object ,&object
 and what happen const declare
