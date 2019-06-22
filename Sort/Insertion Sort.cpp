@@ -39,7 +39,7 @@ void InsertionSort(int *arr, int size)
 	}
 }
 
-/* From geekForgeeks code
+/* Insertion code... From geekForgeeks 
 void insertionSort(int arr[], int n)
 {
 	int i, key, j;
@@ -59,6 +59,7 @@ void insertionSort(int arr[], int n)
 	}
 }
 */
+
 int main()
 {
 	int size(10);
