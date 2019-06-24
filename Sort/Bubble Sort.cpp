@@ -6,7 +6,7 @@ using namespace std;
 
 void initialize_array(int *&array, int size)
 {
-	srand(time(0));
+	srand((unsigned int)time(0));
 	array = new int[size];
 	size--;
 	while (size >= 0)
