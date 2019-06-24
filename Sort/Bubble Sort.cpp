@@ -22,21 +22,29 @@ void swap(int &a, int &b)
 
 void BubbleSort(int *&arr,int size)
 {
-	for (int i = 1; i < size; i++)
+	if(arr)
 	{
-		for (int j = 0; j < size - i; j++)
+		for (int i = 1; i < size; i++)
 		{
-			if (arr[j] > arr[j + 1])
-				swap(arr[j], arr[j + 1]);
+			for (int j = 0; j < size - i; j++)
+			{
+				if (arr[j] > arr[j + 1])
+					swap(arr[j], arr[j + 1]);
+			}
 		}
 	}
+	else
+		cout<<"\nArray is not allocate memory\n"<<endl;
 }
 void PrintArray(int *arr,int size)
 {
-	cout << "\nBubble Sort : ";
-	for (int i = 0; i < size; i++)
-		cout << arr[i] << " ";
-	cout << endl;
+	if(arr)
+	{
+		cout << "\nBubble Sort : ";
+		for (int i = 0; i < size; i++)
+			cout << arr[i] << " ";
+		cout << endl;
+	}
 }
 
 int main()
@@ -50,6 +58,8 @@ int main()
 	cout << "\n-------After-------\n";
 	PrintArray(arr,5);
 	cout << endl;
-	delete[]arr;
+	
+	if(arr)
+		delete[]arr;
 	system("pause");
 }

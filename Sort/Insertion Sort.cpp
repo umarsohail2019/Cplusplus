@@ -7,10 +7,10 @@ using namespace std;
 void initialize_array(int *&array, int size)
 {
 	srand((unsigned int) time(0));
-	array = new int[size] {10,9,8,7,6,5,4,3,2,1};
-	//size--;
-	//while (size >= 0)
-	//	array[size] = rand() % 100 + 1, size--;
+	array = new int[size];
+	size--;
+	while (size >= 0)
+		array[size] = rand() % 100 + 1, size--;
 }
 
 void swap(int &a, int &b)
@@ -30,12 +30,15 @@ void PrintArray(int *arr, int size)
 
 void InsertionSort(int *arr, int size)
 {
-	int i = 1, y = 0;
-	while (i < size)
+	if(arr)	
 	{
-		y = i, i++;
-		while (y > 0 && arr[y] < arr[y - 1])
-			swap(arr[y], arr[y - 1]), y--;
+		int i = 1, y = 0;
+		while (i < size)
+		{
+			y = i, i++;
+			while (y > 0 && arr[y] < arr[y - 1])
+				swap(arr[y], arr[y - 1]), y--;
+		}
 	}
 }
 
@@ -72,7 +75,7 @@ int main()
 	cout << "\n-------After-------\n";
 	PrintArray(arr, size);
 	cout << endl;
-	delete[]arr;
-
+	if(arr)
+		delete[]arr;
 	system("pause");
 }
